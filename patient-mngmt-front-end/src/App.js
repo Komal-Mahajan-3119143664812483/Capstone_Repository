@@ -1,13 +1,20 @@
-
-import './App.css';
-import ListUsersComp from './Components/ListUsersComp';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Components./Login';
+import Registration from './Components./Registration';
 
 function App() {
   return (
-    <div className="App">
-      <h1 text-align="center"> PATIENT REPORT MANAGEMENT SYSTEM</h1>
-      <ListUsersComp />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/register">
+          <Registration />
+        </Route>
+        </Routes>
+    </Router>
   );
 }
 
